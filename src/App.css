@@ -1,0 +1,500 @@
+/*Poppins betítípus importálás*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin:0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+/*Az összes fejléc-ben található elem formázása*/
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1111;
+  transition: .3s;
+}
+header ul {
+  display: flex;
+  gap:3rem;
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  color:black;
+  position: relative;
+}
+header ul li a:before {
+  content: '';
+  position: absolute;
+  top:100%;
+  left:0;
+  height: 2px;
+  width: 0;
+  background-color: #1866db;
+  transition: .3s;
+}
+header ul li a:hover:before {
+  width: 100%;
+  transition: .3s;
+}
+/*Ezt az osztályt kapja meg a fejléc görgetéskor.*/
+.activeheader {
+  background-image: linear-gradient(to right top, #ffffff, #f4f4f4, #e9e9e9, #dedede, #d3d3d3);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: .3s;
+}
+/*A hamburger menüre kattintáskor ezzel a beállítással érkezik le a menü.*/
+.activemenu {
+  transform: translateY(0);
+  transition: .3s;
+}
+/*Amikor valamely menüre kattint a felhasználó, erre a színre változik.*/
+.active {
+  color:#1866db;
+}
+/*Hamburger menü*/
+.menu {
+  width:25px;
+  height:25px;
+  display: none;
+}
+/*Bezáró gomb a menü lenyitása után responsive nézetben.*/
+.close {
+  width:30px;
+  height:30px;
+  position: absolute;
+  right: 0;
+  top:10px;
+  margin:0.2rem 1rem;
+  display: none;
+}
+.shopping-cart {
+  position: relative;
+  top:2px;
+  z-index: -1;
+}
+.cart-icon {
+  width:25px;
+  height: 25px;
+  position: relative;
+}
+.shopping-cart:before {
+  content:'';
+  position: absolute;
+  top:0;
+  right:-5px;
+  height:10px;
+  width:10px;
+  background: red;
+  z-index: 1;
+  border-radius: 50%;
+}
+/*A hero szakasz formázása, a h1-es címsortól kezdődően.*/
+.hero-container {
+  margin-top:5rem;
+}
+.hero-text h1 {
+  text-transform: uppercase;
+  font-size: clamp(20px, 4vw,40px);
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:8rem 0.5rem 0rem 0.5rem;
+  text-align: center;
+}
+.hero-text p {
+  margin:0.5rem 0rem;
+  font-size: clamp(12px, 1vw,20px);
+}
+.hero-image {
+  position: relative;
+  margin-top:4rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.hero-image:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #27374D;
+  border-radius: 50% 50% 0% 0%/100% 100% 0% 0%;
+  transform: scaleX(1.5);
+}
+/*Hero szakaszban található slider.*/
+.slider-first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+.slider-text {
+  color: white;
+}
+.slider-text h3 {
+  font-size:4rem;
+  margin-bottom:0rem;
+  margin-top:1rem;
+}
+.slider-text h4 {
+  font-size: 2.5rem;
+  margin-top:0rem;
+  margin-bottom: 1rem;
+}
+.slider-text p {
+  font-size: 1.5rem;
+  color: #2AF598;
+}
+.slider-text button {
+  border: none;
+  padding:0.8rem 1.5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background: #2AF598;
+  font-weight: bold;
+  transition: .3s;
+}
+.slider-text button:hover {
+  transition: .3s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.slider-cart {
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+}
+.slider-image img{
+  width:450px;
+  transform: rotate(-30deg);
+}
+/*Cipő box formázása.*/
+.shoes-container {
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin:2rem 1rem 0rem 1rem;
+}
+.shoe-image img {
+  transform: rotate(-30deg);
+  width:220px;
+  margin-top:-10rem;
+}
+.shoe-layer {
+  position: relative;
+  overflow: hidden;
+  height:100px;
+}
+.shoe-container {
+  width:280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right top, #95b0d8, #aab7d6, #babfd4, #c7c7d2, #d1d1d1);
+  margin-bottom:3.5rem;
+  border-radius: 12px;
+  position: relative;
+}
+.shoe-content {
+  margin:-1.2rem 0.2rem 0rem 0.2rem;
+  text-align: center;
+}
+.shoe-content h1 {
+  position: relative;
+  z-index: 1;
+  margin-bottom:2rem;
+  font-size: 1.8rem;
+}
+.shoe-content h1:before {
+  content:'';
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(to right top, #9bb0cf, #6d80cf, #9699d0, #b6b4d0, #d1d1d1);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.shoe-size ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap:1rem;
+  margin:0;
+  padding: 0;
+}
+.shoe-size ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shoe-size ul li:hover:before {
+  width: 100%;
+  transition: .3s;
+}
+.shoe-size ul li:hover {
+  cursor: pointer;
+}
+.shoe-size-active {
+  color: #474b52;
+  font-weight: bold;
+  border-bottom:2px solid #474b52;
+}
+.shoe-btn {
+  width:280px;
+  height:50px;
+  background-image: linear-gradient(to right top, #ffffff, #f4f4f4, #e9e9e9, #dedede, #d3d3d3);
+  z-index: 111;
+  border-radius: 50% 50% 0% 0%/100% 100% 0% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.shoe-btn button {
+  border:0;
+  background: transparent;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  z-index: 11111;
+}
+.shoe-btn button:hover {
+  cursor: pointer;
+  color:#1866db;
+}
+.shoe-content h3 {
+  position: relative;
+  color:#1866db;
+  margin-bottom:1.5rem;
+}
+.shoe-content h3:before {
+  content: '';
+  position: absolute;
+  top:100%;
+  left:50%;
+  transform: translate(-50%, -10%);
+  width: 70px;
+  height: 20px;
+  background: url('./assets/line.png');
+  background-repeat: no-repeat;
+}
+/*"Megvásárolom" gombra kattintva, ez a formázott osztály jelenik meg-*/
+.activebtn {
+  bottom:-50px;
+  left:0;
+  position: absolute;
+  height: 350px;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  transition: .3s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 5px;
+}
+/*Alaphelyzetben ne látszódjon az egyel fentebb említett box tartalma.*/
+.cart-details {
+  display: none;
+}
+/*"Megvásárolom" gombra kattintva ezt az osztályt kapja meg onClick eseménynél, hogy látszódjanak a választási lehetőségek.*/
+.activecart {
+  display: block;
+}
+.shoe-btn-content {
+  display: flex;
+  flex-direction: column-reverse;
+  gap:1rem;
+}
+/*Fizetési lehetőségek szülő osztálya.*/
+.choose {
+  display: flex;
+  flex-direction: column;
+}
+.choose-back {
+  display: flex;
+  align-items: center;
+}
+.choose-back:hover {
+  color:#2769cf;
+  cursor: pointer;
+}
+/*Vissza gomb.*/
+.back {
+  width:30px;
+  height: 20px;
+}
+/*Elérhetőségek, ügyfélszolgálat section formázása.*/
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-top:5rem;
+  background:#27374D;
+  color: rgb(187, 187, 187);
+  position: relative;
+  padding:2rem;
+}
+.about-container:before {
+  content:'';
+  position: absolute;
+  top:-1px;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/wave.svg');
+  background-repeat: no-repeat;
+}
+.about-phone {
+  display: flex;
+  align-items: center;
+}
+.about-container p {
+  margin:0.3rem 0rem;
+}
+.about-phone {
+  margin-bottom:1rem;
+}
+.about-social {
+  display: flex;
+  font-size:1.5rem;
+}
+.about-social img {
+ width:25px;
+ height: 25px;
+}
+/*A social media iconok formázása.*/
+.tooltip {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.tooltip p {
+  font-size: 0.8rem;
+  color: white;
+  padding:0.2rem;
+  border-radius: 3px;
+}
+.instagram, .email, .messenger{
+  opacity: 0;
+}
+img:hover {
+  cursor: pointer;
+}
+a.email-tooltip:hover ~ .email {
+  opacity: 1;
+}
+a.messenger-tooltip:hover ~ .messenger {
+  opacity: 1;
+}
+a.instagram-tooltip:hover ~ .instagram {
+  opacity: 1;
+}
+.instagram {
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.messenger {
+  background:rgb(255, 143, 178);
+}
+.email {
+  background-image: linear-gradient(to right top, #4285f4, #009bf2, #00a6cb, #00aa90, #34a853);
+}
+.about-image {
+  width: 450px;
+}
+.about-text {
+  position: relative;
+  padding: 1rem;
+  margin-top:5rem;
+}
+/*Média lekérdezés 1130-as kijelzőméretnél, az ügyfélszolgálat section-ben található elemek egymás alá igazítása.*/
+@media(max-width:1130px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+/*Média lekérdezés 1000-es kijelzőméretnél, a hero section-ben található slider címsorainak, illetve képének formázása.*/
+@media(max-width:1000px) {
+  .slider-text h3 {
+    font-size: 3rem;
+  }
+  .slider-text h4 {
+    font-size: 1.5rem;
+  }
+  .slider-image img {
+    width: 300px;
+  }
+}
+/*Média lekérdezés 800-as kijelzőméretnél, eltűnnek az egymás mellett lévő menük, helyette megjelenik a hamburger menü.*/
+@media(max-width:800px) {
+  .menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+  .about-image {
+    width: 350px;
+  }
+  header {
+    justify-content: space-between;
+  }
+  .text {
+    margin-left:2rem;
+  }
+  header ul {
+    display: block;
+    position: absolute;
+    right:0;
+    top:-13px;
+    background-image: linear-gradient(to right top, #ffffff, #f4f4f4, #e9e9e9, #dedede, #d3d3d3);
+    transform: translateY(-120%);
+    padding:2rem;
+    width:150px;
+    transition: .3s;
+  }
+  header ul li {
+    margin:1.5rem 0rem;
+  }
+  .close {
+    display: block;
+  }
+  .shopping-cart {
+    position: absolute;
+    right: 120px;
+    top:20px;
+  }
+}
+/*Média lekérdezés 715-ös kijelzőméretnél, a slider formázása. A kép és a szöveg egymás alá igazítása, illetve a curved design-ű hero section kisebb formázása.*/
+@media(max-width:715px) {
+  .slider-first {
+    flex-direction: column-reverse;
+  }
+  .hero-image:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #27374D;
+    border-radius: 50% 50% 0% 0%/100% 100% 0% 0%;
+    transform: scaleX(1.9);
+  }
+}
+/*Média lekérdezés 385-ös kijelzőméretnél, az ügyfélszolgálat részben található 3D-s svg méretének kisebbre állítása.*/
+@media(max-width:385px) {
+  .about-image {
+    width: 250px;
+  }
+}
