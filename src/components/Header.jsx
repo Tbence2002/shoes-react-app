@@ -22,7 +22,7 @@ function Header() {
         <div className='text'><h1>Shoes.</h1></div>
         <nav>
           <ul className={activeMenu ? "activemenu" : ""}>
-            <svg className='close' onClick={() => setActiveMenu(!activeMenu)} fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className='close' onClick={() => setActiveMenu(!activeMenu)} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M18 6 6 18"></path>
               <path d="m6 6 12 12"></path>
             </svg>
@@ -32,13 +32,13 @@ function Header() {
           </ul>
         </nav>
         <div className='shopping-cart'>
-          <svg className='cart-icon' fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg className='cart-icon' fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M9 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
             <path d="M20 20a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
         </div>
-        <svg className='menu' onClick={() => setActiveMenu(!activeMenu)} fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg className='menu' onClick={() => setActiveMenu(!activeMenu)} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path d="M17 10H3"></path>
           <path d="M21 6H3"></path>
           <path d="M21 14H3"></path>
