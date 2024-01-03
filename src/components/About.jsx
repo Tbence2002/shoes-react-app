@@ -10,7 +10,7 @@ import animationData from '../assets/data.json'
 function About() {
   return (
     <section className='about-container'>
-      <a id="about"></a>
+      <div id="about"></div>
       <div className='about-text'>
         <h2>Kérdése van?</h2>
         <p>Hívja ügyfélszolgálatunkat hétköznap 9:00-tól 17:00-ig.</p>
@@ -22,21 +22,21 @@ function About() {
         <p>Írjon nekünk <span>instagramon</span>, <span>messengeren</span>, <span>emailes úton</span>.</p>
         <div className='about-social'>
           <div className='tooltip'>
-          <a href="https://www.instagram.com/" target="_blank" className='instagram-tooltip'><img src={instagram} alt="instagram" /></a>
+          <a href="https://www.instagram.com/" target="_blank" className='instagram-tooltip' rel="noreferrer"><img src={instagram} alt="instagram" /></a>
             <p className='instagram'>Instagram</p>
           </div>
           <div className='tooltip'>
-            <a href="https://www.facebook.com/" target="_blank" className='messenger-tooltip' ><img src={messenger} alt="messenger"/></a>
+            <a href="https://www.facebook.com/" target="_blank" className='messenger-tooltip' rel="noreferrer"><img src={messenger} alt="messenger"/></a>
             <p className='messenger'>Messenger</p>
           </div>
           <div className='tooltip'>
-            <a className='email-tooltip'><img src={email} alt="email" /></a>
+            <span className='email-tooltip'><img src={email} alt="email" /></span>
             <p className='email'>info@shoes.hu</p>
           </div>
         </div>
       </div>
       <div className='about-image'>
-        <Lottie animationData={animationData} />
+        <Lottie animationData={animationData}/>
       </div>
     </section>
   )
