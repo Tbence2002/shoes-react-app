@@ -34,14 +34,14 @@ function Shoe({ shoess }) {
             <div className='choose'>
               <div className='choose-single'>
                 <input type="checkbox" name="card" id="card" />
-                <label for="card">Bankkártyával fizetek</label>
+                <label htmlFor="card">Bankkártyával fizetek</label>
               </div>
               <div className='choose-single'>
                 <input type="checkbox" name="payafter" id="payafter" />
-                <label for="payafter">Utánvéttel fizetek</label>
+                <label htmlFor="payafter">Utánvéttel fizetek</label>
               </div>
               <div className='choose-back' onClick={()=> setActiveBtn(false)}>
-                <svg className="back" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="back" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19 12H5"></path>
                   <path d="m12 19-7-7 7-7"></path>
                 </svg>
