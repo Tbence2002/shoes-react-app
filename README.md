@@ -1,4 +1,4 @@
-Cipő Webshop Projekt.
+# Cipő Webshop Projekt.
 
 Oldal elindítása fejlesztői környezetben:
 A projekt node_modules nélkül kerül feltöltésre, ezért szükséges egy "npm i" parancs.
