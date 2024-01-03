@@ -391,7 +391,12 @@ header ul li a:hover:before {
 img:hover {
   cursor: pointer;
 }
-a.email-tooltip:hover ~ .email {
+span.email-tooltip {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+}
+span.email-tooltip:hover ~ .email {
   opacity: 1;
 }
 a.messenger-tooltip:hover ~ .messenger {
@@ -459,12 +464,20 @@ a.instagram-tooltip:hover ~ .instagram {
     display: block;
     position: absolute;
     right:0;
-    top:-13px;
+    top:-18px;
     background-image: linear-gradient(to right top, #ffffff, #f4f4f4, #e9e9e9, #dedede, #d3d3d3);
     transform: translateY(-120%);
     padding:2rem;
-    width:150px;
+    width:200px;
     transition: .3s;
+    height: 100vh;
+    animation: 2s hidden forwards;
+    opacity: 0;
+  }
+  @keyframes hidden {
+    to {
+      opacity: 1;
+    }
   }
   header ul li {
     margin:1.5rem 0rem;
