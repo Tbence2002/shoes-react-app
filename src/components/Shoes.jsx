@@ -5,7 +5,7 @@ import Shoe from './Shoe'
 function Shoes({cart, setCart}) {
   return (
     <section className='shoes-container'>
-        <a id="shoes"></a>
+        <div id="shoes"></div>
         <div className='shoes-container'>
         {allshoes.map((shoess)=> {
             return <Shoe key={shoess.id} cart={cart} setCart={setCart} shoess={shoess}/>
