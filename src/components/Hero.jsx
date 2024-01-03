@@ -10,7 +10,7 @@ function Hero() {
 
     return (
         <section className='hero-container'>
-            <a id="home"></a>
+            <div id="home"></div>
             <div className='hero-text'>
                 <h1>Az igazi stílus a lábad alatt - Fedezd fel a lépésekben rejlő szenvedélyt!</h1>
                 <p>Készülj fel az élet nagy kalandjaira a tökéletes cipőkkel. Minőség, kényelem és stílus találkozik, hogy minden lépésedben önbizalmat sugározz. </p>
